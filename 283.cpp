@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+
+class Solution {
+public:
+    void moveZeroes(std::vector<int>& nums) {
+        int write = 0;
+
+        for (int i =0; i<nums.size(); i++){
+            if (nums[i] != 0){
+                nums[write++] = nums[i];
+            }
+        }
+        while(write < nums.size()){
+            nums[write++] = 0;
+        }
+
+    }
+};
